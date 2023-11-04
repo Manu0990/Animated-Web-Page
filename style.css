@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "gilroy";
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+}
+
+#back {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#back img {
+    height: 100%;
+    width: 100%;
+}
+
+#top {
+    pointer-events: none;      /*To make the top layer non-clickable */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#workarea {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;               /*80% of top(parent) */
+    max-width: 1920px;        /*The screen cannot exceed more than 1920px though 80% of parent->top*/
+    height: 100vh;
+}
+
+#nav {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav img {
+    height: 50px;
+}
+
+#nleft, #nright {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+#nav a {
+    pointer-events: all;
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+#textitems {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#t_left {
+    min-width: 50%;
+}
+
+#t_left .elem {
+    position: relative;
+    height: 9vw;
+    overflow: hidden;
+}
+
+#t_left .elem h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    line-height: .9;
+    font-family: "kajiro";
+    color: #fff;
+    font-weight: 100;
+    font-size: 12vw;
+}
+
+#t_left .elem h1:nth-child(1) {
+    top: 0;
+}
+#t_left button {
+    pointer-events: all;
+    padding: .7vw 3vw;
+    font-size: 3.5vh;
+    margin-top: 2.5vw;
+    font-family: "kajiro";
+}
+
+#t_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 17%;
+    color: #fff;
+}
+
+#t_right p {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#t_right #imagediv {
+    width: 100%;
+    height: 170px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-image: url(https://images.unsplash.com/photo-1570158268183-d296b2892211?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#t_right p:nth-child(3) {
+    margin-bottom: 80px;
+}
